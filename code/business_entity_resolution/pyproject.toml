@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "business-entity-resolution"
+version = "0.1.0"
+description = "Business entity resolution pipeline"
+requires-python = ">=3.10"
+dependencies = [
+  "pandas>=2.0",
+  "numpy>=1.26",
+  "scikit-learn>=1.5",
+  "scipy>=1.11",
+  "joblib>=1.4",
+  "lightgbm>=4.0",
+  "xgboost>=2.0",
+  "pyyaml>=6.0",
+  "rapidfuzz>=3.0",
+]
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
